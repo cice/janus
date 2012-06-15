@@ -28,7 +28,7 @@ To upgrade to the latest version:
 2. move customizations from `~/.vimrc.local` to `~/.vimrc.before` and
    `~/.vimrc.after`.
 3. Do the same with `/.gvimrc.local`.
-4. Run the installer: `curl -Lo- http://bit.ly/janus-bootstrap | bash`
+4. Run the installer: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
 
 ## Updating to the latest version (from any time after January 10th, 2012)
 
@@ -49,7 +49,7 @@ discussion and announcements.
 
 The distribution is designed to work with Vim >= 7.3.
 
-The distribution also requires `ack`, `pep8`, `ctags`, `ruby` and `rake`.
+The distribution also requires `ack`, `ctags`, `git`, `ruby` and `rake`.
 For the most comfortable experience, use the GUI version of Vim. Linux
 users should install `gvim`, OSX users should install
 [MacVim](http://code.google.com/p/macvim/). The recommended way of
@@ -80,7 +80,7 @@ installer](https://github.com/carlhuda/janus/blob/master/bootstrap.sh)
 Janus.
 
 ```bash
-$ curl -Lo- http://bit.ly/janus-bootstrap | bash
+$ curl -Lo- https://bit.ly/janus-bootstrap | bash
 ```
 
 ## Customization
@@ -194,7 +194,7 @@ Janus ships with a number of basic customizations for vim:
 * Ruler (line and column numbers)
 * No wrap (turn off per-buffer via :set wrap)
 * Soft 2-space tabs, and default hard tabs to 2 spaces
-* Show tailing whitespace as `.`
+* Show trailing whitespace as `.`
 * Make searching highlighted, incremental, and case insensitive unless a
   capital letter is used
 * Always show a status line
@@ -215,10 +215,6 @@ Janus ships with a number of basic customizations for vim:
 sudo password when writing
 * `<F4>` toggles paste mode
 * `<leader>fef` formats the entire file
-* `,.` (comma followed by a dot) opens the next buffer
-* `,m` (comma followed by m) opens the previous buffer
-* `;'` (semicolon followed by a single quote) switches to next tab
-* `;l` (semicolon followed by l) switches to previous tab
 * `<leader>u` converts the entire word to uppercace
 * `<leader>l` converts the entire word to lowercase
 * `<leader>U` converts the first char of a word to uppercase
@@ -370,6 +366,22 @@ can "walk" up and down the list of buffers shown in the catalog by using
 `<C-N>` (or `<SPACE>`) / `<C-P>` (or `<C-SPACE>`). These keys select the
 next/previous buffer in succession, respectively, opening it for preview
 without leaving the buffer catalog viewer.
+
+## [Vroom](https://github.com/skalnik/vim-vroom)
+
+VRoom is a plugin inspired by [Gary Bernhardt's vim
+config](https://github.com/garybernhardt/dotfiles/blob/69330074b7a15c67efa4594a71fa91592f1ce4f9/.vimrc#L286-342) 
+for running your ruby tests/specs/features.
+
+Imagine you're hacking on a Rails controller, when you switch to the
+test or specs for the controller, you can use `<leader>r` to run all the
+specs or `<leader>R` to run the closest spec, then you can jump back to
+the controller hack on it and use `<leader>r` to run the last spec you
+ran last time, so you don't need to open the test again.
+
+Then benefits of this plugin are to centralize your workflow in one
+window, one software to do it all, which is a huge speedup over using
+`tmux` or multiple terminal tabs.
 
 ## Additional Syntaxes
 

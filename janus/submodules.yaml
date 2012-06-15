@@ -86,7 +86,10 @@ submodules:
     easymotion:
     endwise:
     fugitive:
+    webapi:
     gist:
+      dependencies:
+        - webapi
     gundo:
     indent-object:
     kwbd:
@@ -94,7 +97,6 @@ submodules:
     narrowregion:
     nerdcommenter:
     nerdtree:
-    pep8:
     snipmate:
       dependencies:
         - vim-addon-mw-utils
@@ -112,3 +114,4 @@ submodules:
     vimwiki:
     zoomwin:
     rename2:
+    vroom:
